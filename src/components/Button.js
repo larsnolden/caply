@@ -26,7 +26,7 @@ const Text = styled.div`
 
 //  add type support
 
-const Button = ({ 
+const Button = ({
   type,
   onClick,
   children
