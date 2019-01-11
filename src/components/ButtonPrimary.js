@@ -7,8 +7,8 @@ const ButtonShell = styled.div`
   height: 60px;
   width: ${styles.width[6]}px;
   background: ${styles.primary_color[5]};
-  border-radius: ${styles.border_radius};
-  box-shadow: ${styles.box_shadow[1]};
+  border-radius: ${styles.border_radius}px;
+  box-shadow: ${styles.box_shadow[2]}, ${styles.box_shadow[3]};
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,9 +29,13 @@ const Text = styled.div`
 const Button = ({
   type,
   onClick,
-  children
+  children,
+  className
  }) =>
-  <ButtonShell onClick={onClick}>
+  <ButtonShell
+    className={className} 
+    onClick={onClick}
+  >
     <Text>
       {children}
     </Text>
